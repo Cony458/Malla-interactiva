@@ -61,13 +61,13 @@ function createCourseElement(course) {
   return div;
 }
 
+// Crear todos los elementos
 courses.forEach(course => {
   courseElements[course.name] = createCourseElement(course);
 });
 
-// Desbloquear cursos sin prerrequisitos
+// Desbloquear los ramos sin requisitos
 courses.forEach(course => {
   const hasPrereq = courses.some(c => c.unlocks.includes(course.name));
   if (!hasPrereq) courseElements[course.name].classList.remove("locked");
 });
-
