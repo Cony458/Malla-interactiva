@@ -1,53 +1,41 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f6ff;
-  margin: 0;
-  padding: 20px;
+  font-family: sans-serif;
+  background: #f9f6ff;
   color: #333;
+  margin: 0;
+  padding: 2rem;
 }
 
 h1 {
   text-align: center;
   color: #5e2a84;
-  margin-bottom: 30px;
 }
 
 #grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 15px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
 }
 
 .course {
-  border: 2px solid #b48cd8;
-  background-color: #d6c1f2;
+  border: 2px solid #a277d4;
   border-radius: 12px;
-  padding: 15px;
+  padding: 1rem;
+  background: #d6c1f2;
   cursor: pointer;
-  transition: transform 0.2s, background-color 0.3s;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.course:hover {
-  transform: scale(1.03);
+  transition: 0.2s;
 }
 
 .course.locked {
-  background-color: #f0e9fa;
-  color: #999;
-  border: 2px dashed #b48cd8;
+  background: #eee;
+  border-style: dashed;
   cursor: not-allowed;
+  color: #999;
 }
 
 .course.completed {
-  background-color: #a277d4;
+  background: #5e2a84;
   color: #fff;
-  border: 2px solid #5e2a84;
-}
-
-.course h3 {
-  margin: 0 0 10px;
-  font-size: 1.1em;
-  color: #4a1c72;
+  border-color: #5e2a84;
 }
